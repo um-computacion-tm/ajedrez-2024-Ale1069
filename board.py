@@ -9,9 +9,9 @@ class Board:
                 col.append(None)
             self.__positions__.append(col)
         self.__positions__ = [0][0] = Rook("BLACK") #black
-        self.__positions__ = [0][7] = Rook("BLACK")
+        self.__positions__ = [0][7] = Rook("BLACK") #black
         self.__positions__ = [7][7] = Rook("WHITE") #white
-        self.__positions__ = [7][0] = Rook("WHITE")
+        self.__positions__ = [7][0] = Rook("WHITE") #white
 
     def __str__(self):
         board_str = ""
