@@ -19,5 +19,27 @@ class TestBoard(unittest.TestCase):
         self.assertIsInstance(board.get_piece(7, 7), Rook)
         self.assertEqual(str(board.get_piece(7, 7)), "\u2656")  # Torre blanca
 
+        for row in range(8):
+            for col in range(8):
+                if (row, col) not in [(0, 0), (0, 7), (7, 0), (7, 7)]:
+                    self.assertIsNone(board.get_piece(row, col))
+
+    def test_str_representation(self):
+        board = Board()
+        board_str = str(board)
+
+        expected_str = (
+            "♜      ♜\n"  
+            "        \n"  
+            "        \n"  
+            "        \n"  
+            "        \n"  
+            "        \n"  
+            "        \n"  
+            "♖      ♖\n" 
+        )
+
+        self.assertEqual(board_str, expected_str)
+
 if __name__ == '__main__':
     unittest.main()
