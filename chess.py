@@ -13,6 +13,13 @@ class Chess:
         #validar coordenadas
         piece = self.board.get_piece(from_row, from_col, to_row, to_col)
         self.change_turn()
+    @property
+    def turn(self):
+        return self.__turn__
+
+    def show_board(self):
+        return str(self.__board__)
+    
     #cambiar turno
     def change_turn(self):    
         if self.__turn__ == "WHITE":
