@@ -1,3 +1,7 @@
 class Rook:
     def __init__(self):
-        self.__color__ == ("WHITE"): 
+        def __str__(self):
+            if self.__color__ == ("WHITE"): 
+                return "♜"
+            else:
+                return "♖"
